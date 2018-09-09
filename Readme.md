@@ -1,7 +1,7 @@
 # Личный проект «Пиксель хантер» [![Build status][travis-image]][travis-url]
 
 * Студент: [Bipolar Disorder](https://up.htmlacademy.ru/ecmascript/6/user/18339).
-* Наставник: `Неизвестно`.
+* Наставник: `Николай Яшин`.
 
 ---
 
