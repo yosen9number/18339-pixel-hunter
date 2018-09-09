@@ -1,8 +1,9 @@
-import {render} from './util.js';
+import {changeScreen, render} from './util.js';
+import statsScreen from "./stats";
+import introScreen from "./intro";
 
 const template = `
-<template id="game-3">
-  <header class="header">
+    <header class="header">
     <button class="back">
       <span class="visually-hidden">Вернуться к началу</span>
       <svg class="icon" width="45" height="45" viewBox="0 0 45 45" fill="#000000">
@@ -18,8 +19,8 @@ const template = `
       <img src="img/heart__full.svg" class="game__heart" alt="Life" width="31" height="27">
       <img src="img/heart__full.svg" class="game__heart" alt="Life" width="31" height="27">
     </div>
-  </header>
-  <section class="game">
+    </header>
+    <section class="game">
     <p class="game__task">Найдите рисунок среди изображений</p>
     <form class="game__content  game__content--triple">
       <div class="game__option">
@@ -44,10 +45,21 @@ const template = `
       <li class="stats__result stats__result--fast"></li>
       <li class="stats__result stats__result--unknown"></li>
     </ul>
-  </section>
-</template>
+    </section>
 `;
 
 const game3Screen = render(template);
+
+const backButton = game3Screen.querySelector(`.back`);
+
+backButton.addEventListener(`click`, () => {
+  changeScreen(introScreen);
+});
+
+const gameOptionButton = game3Screen.querySelector(`.game__option`);
+
+gameOptionButton.addEventListener(`click`, () => {
+  changeScreen(statsScreen);
+});
 
 export default game3Screen;

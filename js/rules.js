@@ -1,4 +1,6 @@
-import {render} from './util.js';
+import {changeScreen, render} from './util.js';
+import game1Screen from "./game-1";
+import introScreen from "./intro";
 
 const template = `
   <header class="header">
@@ -31,5 +33,17 @@ const template = `
 `;
 
 const rulesScreen = render(template);
+
+const backButton = rulesScreen.querySelector(`.back`);
+
+backButton.addEventListener(`click`, () => {
+  changeScreen(introScreen);
+});
+
+const rulesButton = rulesScreen.querySelector(`.rules__button`);
+
+rulesButton.addEventListener(`click`, () => {
+  changeScreen(game1Screen);
+});
 
 export default rulesScreen;

@@ -1,4 +1,5 @@
-import {render} from './util.js';
+import {changeScreen, render} from './util.js';
+import rulesScreen from "./rules";
 
 const template = `
   <section class="greeting central--blur">
@@ -24,5 +25,12 @@ const template = `
 `;
 
 const greetingScreen = render(template);
+
+const greetingButton = greetingScreen.querySelector(`.greeting__continue`);
+
+greetingButton.addEventListener(`click`, () => {
+  changeScreen(rulesScreen);
+});
+
 
 export default greetingScreen;
