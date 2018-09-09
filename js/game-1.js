@@ -1,7 +1,6 @@
 import {render} from './util.js';
 
 const template = `
-<template id="game-1">
   <header class="header">
     <button class="back">
       <span class="visually-hidden">Вернуться к началу</span>
@@ -58,7 +57,6 @@ const template = `
       <li class="stats__result stats__result--unknown"></li>
     </ul>
   </section>
-</template>
 `;
 
 const game1Screen = render(template);

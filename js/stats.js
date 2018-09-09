@@ -1,7 +1,6 @@
 import {render} from './util.js';
 
 const template = `
-<template id="stats">
   <header class="header">
     <button class="back">
       <span class="visually-hidden">Вернуться к началу</span>
@@ -113,7 +112,6 @@ const template = `
       </tr>
     </table>
   </section>
-</template>
 `;
 
 const statsScreen = render(template);

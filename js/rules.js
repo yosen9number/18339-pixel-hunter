@@ -1,7 +1,6 @@
 import {render} from './util.js';
 
 const template = `
-<template id="rules">
   <header class="header">
     <button class="back">
       <span class="visually-hidden">Вернуться к началу</span>
@@ -29,7 +28,6 @@ const template = `
       <button class="rules__button  continue" type="submit" disabled>Go!</button>
     </form>
   </section>
-</template>
 `;
 
 const rulesScreen = render(template);
