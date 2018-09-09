@@ -10,6 +10,29 @@ const selectSlide = (element) => {
   mainElement.appendChild(element.cloneNode(true));
 };
 
+const htmlArrows = `
+<style>
+    .arrows__wrap {
+      position: absolute;
+      top: 95px;
+      left: 50%;
+      margin-left: -56px;
+    }
+    .arrows__btn {
+      background: none;
+      border: 2px solid black;
+      padding: 5px 20px;
+    }
+  </style>
+  <button class="arrows__btn"><-</button>
+  <button class="arrows__btn">-></button>
+`;
+
+const arrows = document.createElement(`div`);
+arrows.className = `arrows__wrap`;
+arrows.innerHTML = htmlArrows;
+document.body.insertBefore(arrows, document.body.lastChild);
+
 const screens = Array.from(document.querySelectorAll(`template`)).
 map((it) => it.content);
 
